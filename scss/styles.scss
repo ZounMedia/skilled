@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+// fonts
+@font-face {
+  font-family: pjs-reg;
+  src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf);
+}
+
+// colors
 $pale-purple: #666ca3;
 $darkets-purple: #13183f;
 $grey: #83869a;
@@ -13,4 +20,72 @@ $gradient1: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
 $gradient2: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
 
 body {
+  font-size: 16px;
+  color: $grey;
+  font-family: pjs-reg;
+
+  .container {
+    header {
+      height: 98vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1%;
+
+      nav,
+      .heading,
+      .description,
+      .hero-img {
+        width: 100%;
+      }
+
+      nav {
+        border: 1px solid black;
+        height: 48px;
+        height: 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+          img {
+            width: 89px;
+            height: 35px;
+          }
+        }
+
+        button {
+          width: 140px;
+          height: 48px;
+          border-radius: 28px;
+          font-weight: 700;
+          background-color: $darkets-purple;
+          color: white;
+          transition: all 0.35s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $pale-purple;
+          }
+        }
+      }
+
+      .heading {
+        border: 1px solid black;
+        width: 100%;
+        height: 12%;
+      }
+
+      .description {
+        border: 1px solid black;
+        height: 22%;
+      }
+
+      .hero-img {
+        border: 1px solid black;
+        height: 50%;
+      }
+    }
+  }
 }

@@ -4,4 +4,66 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: pjs-reg;
+  src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf);
+}
+body {
+  font-size: 16px;
+  color: #83869a;
+  font-family: pjs-reg;
+}
+body .container header {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+}
+body .container header nav,
+body .container header .heading,
+body .container header .description,
+body .container header .hero-img {
+  width: 100%;
+}
+body .container header nav {
+  border: 1px solid black;
+  height: 48px;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container header nav .logo img {
+  width: 89px;
+  height: 35px;
+}
+body .container header nav button {
+  width: 140px;
+  height: 48px;
+  border-radius: 28px;
+  font-weight: 700;
+  background-color: #13183f;
+  color: white;
+  transition: all 0.35s ease-in-out;
+}
+body .container header nav button:hover {
+  cursor: pointer;
+  background-color: #666ca3;
+}
+body .container header .heading {
+  border: 1px solid black;
+  width: 100%;
+  height: 12%;
+}
+body .container header .description {
+  border: 1px solid black;
+  height: 22%;
+}
+body .container header .hero-img {
+  border: 1px solid black;
+  height: 50%;
+}
+
 /*# sourceMappingURL=styles.css.map */
