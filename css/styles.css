@@ -8,6 +8,10 @@
   font-family: pjs-reg;
   src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf);
 }
+@font-face {
+  font-family: pjs-semi-b;
+  src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf);
+}
 body {
   font-size: 16px;
   color: #83869a;
@@ -28,7 +32,6 @@ body .container header .hero-img {
   width: 100%;
 }
 body .container header nav {
-  border: 1px solid black;
   height: 48px;
   height: 8%;
   display: flex;
@@ -40,6 +43,7 @@ body .container header nav .logo img {
   height: 35px;
 }
 body .container header nav button {
+  border: none;
   width: 140px;
   height: 48px;
   border-radius: 28px;
@@ -53,17 +57,39 @@ body .container header nav button:hover {
   background-color: #666ca3;
 }
 body .container header .heading {
-  border: 1px solid black;
   width: 100%;
   height: 12%;
+  font-family: pjs-semi-b;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #13183f;
 }
 body .container header .description {
-  border: 1px solid black;
   height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .container header .description button {
+  border: none;
+  width: 140px;
+  height: 48px;
+  border-radius: 28px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  color: white;
+  transition: all 0.35s ease-in-out;
+}
+body .container header .description button:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
 }
 body .container header .hero-img {
-  border: 1px solid black;
   height: 50%;
+}
+body .container header .hero-img img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

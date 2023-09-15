@@ -10,6 +10,11 @@
   src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf);
 }
 
+@font-face {
+  font-family: pjs-semi-b;
+  src: url(../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf);
+}
+
 // colors
 $pale-purple: #666ca3;
 $darkets-purple: #13183f;
@@ -17,6 +22,12 @@ $grey: #83869a;
 $hot-pink: #f74780;
 $light-pink: #ffa7c3;
 $gradient1: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+$gradient1-hover: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  ),
+  linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
 $gradient2: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
 
 body {
@@ -41,7 +52,6 @@ body {
       }
 
       nav {
-        border: 1px solid black;
         height: 48px;
         height: 8%;
         display: flex;
@@ -56,6 +66,7 @@ body {
         }
 
         button {
+          border: none;
           width: 140px;
           height: 48px;
           border-radius: 28px;
@@ -72,19 +83,44 @@ body {
       }
 
       .heading {
-        border: 1px solid black;
         width: 100%;
         height: 12%;
+        font-family: pjs-semi-b;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $darkets-purple;
       }
 
       .description {
-        border: 1px solid black;
         height: 22%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+          border: none;
+          width: 140px;
+          height: 48px;
+          border-radius: 28px;
+          font-weight: 700;
+          background: $gradient1;
+          color: white;
+          transition: all 0.35s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            background: $gradient1-hover;
+          }
+        }
       }
 
       .hero-img {
-        border: 1px solid black;
         height: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
