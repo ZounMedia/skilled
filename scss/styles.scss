@@ -36,10 +36,34 @@ $gradient2-hover: linear-gradient(
   ),
   linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
 
+// device brakpoints
+$tablet-layout: 768px;
+$desktop-layout: 1440px;
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  width: 3px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 3px;
+  background: $gradient1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gradient1-hover;
+}
+
 body {
   font-size: 16px;
   color: $grey;
   font-family: pjs-reg;
+
   button {
     border: none;
     border-radius: 28px;
@@ -130,6 +154,11 @@ body {
           width: 100%;
           height: 100%;
         }
+      }
+
+      // Header media queries
+      @media (min-width: $tablet-layout) {
+        flex-direction: row;
       }
     }
 
