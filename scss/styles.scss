@@ -121,44 +121,106 @@ body {
         }
       }
 
-      .heading {
-        width: 100%;
-        height: 12%;
-        font-family: pjs-semi-b;
-        font-size: 2rem;
-        font-weight: 800;
-        color: $darkest-purple;
-      }
-
-      .description {
-        height: 22%;
+      section {
+        height: calc(100% - 48px);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
-        button {
-          width: 140px;
-          height: 48px;
-          background: $gradient1;
+        .description-container {
+          height: 45%;
 
-          &:hover {
-            background: $gradient1-hover;
+          .heading {
+            width: 100%;
+            height: 45%;
+            display: flex;
+            align-items: flex-end;
+            font-family: pjs-semi-b;
+            font-size: 2rem;
+            font-weight: 800;
+            color: $darkest-purple;
+          }
+
+          .description {
+            height: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            button {
+              width: 140px;
+              height: 48px;
+              background: $gradient1;
+
+              &:hover {
+                background: $gradient1-hover;
+              }
+            }
           }
         }
       }
 
       .hero-img {
-        height: 50%;
+        height: 55%;
 
-        img {
+        img.mobile,
+        img.tablet {
           width: 100%;
           height: 100%;
+        }
+
+        img.tablet {
+          display: none;
         }
       }
 
       // Header media queries
       @media (min-width: $tablet-layout) {
-        flex-direction: row;
+        height: 60vh;
+        padding: 2% 0 0 5%;
+        justify-content: flex-start;
+        section {
+          height: calc(80% - 48px);
+          flex-direction: row;
+
+          .description-container,
+          .hero-img {
+            height: 100%;
+          }
+
+          .description-container {
+            width: 55%;
+
+            .heading {
+              height: 40%;
+            }
+
+            .description {
+              height: 40%;
+
+              p {
+                line-height: 26px;
+              }
+            }
+          }
+
+          .hero-img {
+            width: 45%;
+
+            img.mobile {
+              display: none;
+            }
+
+            img.tablet {
+              display: inherit;
+              height: 80%;
+              width: 120%;
+              transform: scale(1.8);
+              position: relative;
+              right: -30%;
+              top: 5%;
+            }
+          }
+        }
       }
     }
 
@@ -202,6 +264,10 @@ body {
                 font-family: pjs-semi-b;
                 font-size: 20px;
                 color: $darkest-purple;
+              }
+
+              p {
+                line-height: 26px;
               }
             }
 
