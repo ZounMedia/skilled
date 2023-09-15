@@ -17,7 +17,7 @@
 
 // colors
 $pale-purple: #666ca3;
-$darkets-purple: #13183f;
+$darkest-purple: #13183f;
 $grey: #83869a;
 $hot-pink: #f74780;
 $light-pink: #ffa7c3;
@@ -29,20 +29,41 @@ $gradient1-hover: linear-gradient(
   ),
   linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
 $gradient2: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+$gradient2-hover: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  ),
+  linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
 
 body {
   font-size: 16px;
   color: $grey;
   font-family: pjs-reg;
+  button {
+    border: none;
+    border-radius: 28px;
+    color: white;
+    font-weight: 700;
+    transition: all 0.35s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   .container {
-    header {
-      height: 98vh;
+    header,
+    main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 2%;
+    }
+
+    header {
+      height: 98vh;
       justify-content: space-between;
-      padding: 1%;
 
       nav,
       .heading,
@@ -66,17 +87,11 @@ body {
         }
 
         button {
-          border: none;
           width: 140px;
           height: 48px;
-          border-radius: 28px;
-          font-weight: 700;
-          background-color: $darkets-purple;
-          color: white;
-          transition: all 0.35s ease-in-out;
+          background-color: $darkest-purple;
 
           &:hover {
-            cursor: pointer;
             background-color: $pale-purple;
           }
         }
@@ -88,7 +103,7 @@ body {
         font-family: pjs-semi-b;
         font-size: 2rem;
         font-weight: 800;
-        color: $darkets-purple;
+        color: $darkest-purple;
       }
 
       .description {
@@ -98,17 +113,11 @@ body {
         justify-content: space-between;
 
         button {
-          border: none;
           width: 140px;
           height: 48px;
-          border-radius: 28px;
-          font-weight: 700;
           background: $gradient1;
-          color: white;
-          transition: all 0.35s ease-in-out;
 
           &:hover {
-            cursor: pointer;
             background: $gradient1-hover;
           }
         }
@@ -120,6 +129,99 @@ body {
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+
+    main {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+
+      section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 70px;
+
+        .items-container {
+          width: 100%;
+
+          .item {
+            width: 100%;
+            height: 259px;
+            margin-top: 50px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+
+            .icon,
+            .description,
+            .footer {
+              padding: 0 5%;
+            }
+
+            .icon {
+              img {
+                margin-top: -30px;
+              }
+            }
+
+            .description {
+              h3 {
+                font-family: pjs-semi-b;
+                font-size: 20px;
+                color: $darkest-purple;
+              }
+            }
+
+            .footer {
+              font-size: 18px;
+              color: $hot-pink;
+            }
+
+            &.heading {
+              height: 120px;
+              display: flex;
+              align-items: center;
+              margin-top: 5px;
+              background: $gradient1;
+              color: white;
+              font-size: 24px;
+              font-weight: 800;
+
+              p {
+                padding: 6%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $darkest-purple;
+
+      .logo {
+        img {
+          width: 89px;
+          height: 35px;
+        }
+      }
+
+      button {
+        width: 140px;
+        height: 48px;
+        background: $gradient2;
+
+        &:hover {
+          background: $gradient2-hover;
         }
       }
     }
