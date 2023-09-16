@@ -32,6 +32,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   color: #83869a;
   font-family: pjs-reg;
@@ -46,6 +48,9 @@ body button {
 body button:hover {
   cursor: pointer;
 }
+body .container {
+  max-width: 1440px;
+}
 body .container header,
 body .container main {
   display: flex;
@@ -56,7 +61,7 @@ body .container main {
 body .container header {
   height: 98vh;
   justify-content: space-between;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body .container header nav,
 body .container header .heading,
@@ -76,6 +81,7 @@ body .container header nav .logo img {
   height: 35px;
 }
 body .container header nav button {
+  z-index: 1000;
   width: 140px;
   height: 48px;
   background-color: #13183f;
@@ -126,6 +132,9 @@ body .container header .hero-img img.tablet {
 body .container header .hero-img img.tablet {
   display: none;
 }
+body .container header .hero-img img.desktop {
+  display: none;
+}
 @media (min-width: 768px) {
   body .container header {
     height: 60vh;
@@ -166,6 +175,41 @@ body .container header .hero-img img.tablet {
     position: relative;
     right: -30%;
     top: 5%;
+  }
+}
+@media (min-width: 1440px) {
+  body .container header nav button {
+    margin-right: 8%;
+  }
+  body .container header section {
+    justify-content: space-between;
+  }
+  body .container header section .description-container {
+    width: 50%;
+  }
+  body .container header section .description-container .heading {
+    height: 50%;
+    font-size: 3rem;
+  }
+  body .container header section .description-container .description {
+    height: 45%;
+  }
+  body .container header section .description-container .description p {
+    width: 60%;
+  }
+  body .container header section .hero-img {
+    width: 50%;
+  }
+  body .container header section .hero-img img.tablet {
+    display: none;
+  }
+  body .container header section .hero-img img.desktop {
+    display: inherit;
+    height: 100%;
+    width: 70%;
+    transform: scale(1.8);
+    position: relative;
+    right: -45%;
   }
 }
 body .container main {

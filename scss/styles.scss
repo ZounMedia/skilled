@@ -60,6 +60,8 @@ $desktop-layout: 1440px;
 }
 
 body {
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   color: $grey;
   font-family: pjs-reg;
@@ -77,6 +79,8 @@ body {
   }
 
   .container {
+    max-width: 1440px;
+
     header,
     main {
       display: flex;
@@ -88,7 +92,7 @@ body {
     header {
       height: 98vh;
       justify-content: space-between;
-      overflow-x: hidden;
+      overflow: hidden;
 
       nav,
       .heading,
@@ -112,6 +116,7 @@ body {
         }
 
         button {
+          z-index: 1000;
           width: 140px;
           height: 48px;
           background-color: $darkest-purple;
@@ -172,6 +177,10 @@ body {
         img.tablet {
           display: none;
         }
+
+        img.desktop {
+          display: none;
+        }
       }
 
       // Header media queries
@@ -220,6 +229,51 @@ body {
               position: relative;
               right: -30%;
               top: 5%;
+            }
+          }
+        }
+      }
+
+      @media (min-width: $desktop-layout) {
+        nav {
+          button {
+            margin-right: 8%;
+          }
+        }
+
+        section {
+          justify-content: space-between;
+          .description-container {
+            width: 50%;
+
+            .heading {
+              height: 50%;
+              font-size: 3rem;
+            }
+
+            .description {
+              height: 45%;
+
+              p {
+                width: 60%;
+              }
+            }
+          }
+
+          .hero-img {
+            width: 50%;
+            img.tablet {
+              display: none;
+            }
+
+            img.desktop {
+              display: inherit;
+              height: 100%;
+              width: 70%;
+              transform: scale(1.8);
+              position: relative;
+              right: -45%;
+              // top: -4%;
             }
           }
         }
