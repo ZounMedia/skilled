@@ -343,6 +343,29 @@ body {
           background: $gradient2-hover;
         }
       }
+
+      @media (min-width: $desktop-layout) {
+        justify-content: space-between;
+
+        .logo {
+          margin-left: 5%;
+          img {
+            width: 114px;
+            height: 45px;
+          }
+        }
+
+        button {
+          margin-right: 5%;
+          width: 157px;
+          height: 56px;
+          background: $gradient2;
+
+          &:hover {
+            background: $gradient2-hover;
+          }
+        }
+      }
     }
   }
 }
