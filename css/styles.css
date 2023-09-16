@@ -178,6 +178,9 @@ body .container header .hero-img img.desktop {
   }
 }
 @media (min-width: 1440px) {
+  body .container header nav .logo {
+    margin-left: 2%;
+  }
   body .container header nav button {
     margin-right: 8%;
   }
@@ -282,6 +285,24 @@ body .container main section .items-container .item.heading p {
   body .container main section .items-container .item,
   body .container main section .items-container .item.heading {
     width: 48%;
+    height: 259px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  body .container main {
+    margin-top: 25px;
+    min-height: 50vh;
+    padding: 2% 6%;
+  }
+  body .container main section .items-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  body .container main section .items-container .item,
+  body .container main section .items-container .item.heading {
+    width: 30%;
     height: 259px;
     margin-top: 50px;
   }
